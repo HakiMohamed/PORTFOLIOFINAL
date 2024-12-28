@@ -117,7 +117,14 @@ const Hero = ({ personalInfo }: HeroProps) => {
               >
                 <FaEnvelope className="text-2xl text-white" />
               </motion.a>
-              
+              <motion.a
+                href="uploads\cv\MohamedHaki-MernDeveloper.pdf"
+                download
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="p-3 bg-gray-800 rounded-lg hover:bg-green-500 transition-colors flex items-center"
+              >
+                <span className="text-white font-medium">Download CV</span>
+              </motion.a>
             </motion.div>
           </motion.div>
 
