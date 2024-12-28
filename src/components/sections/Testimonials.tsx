@@ -7,7 +7,7 @@ const testimonials = [
     id: 1,
     name: "Soukaina El Azizi",
     role: "PC HALLE CEO",
-    image: "/public/uploads/soukainaAzizi.jpeg",
+    image: "/uploads/soukainaAzizi.jpeg",
     text: "Mohamed a effectué un stage de 6 mois au sein de Pchalle, durant lequel il a su démontrer son autonomie ainsi que sa capacité à prendre des initiatives pour résoudre divers problèmes techniques. Je le recommande vivement et lui souhaite beaucoup de succès pour la suite.",
     rating: 5,
     linkedinUrl: "https://www.linkedin.com/in/mohamedhaki/details/recommendations/?detailScreenTabIndex=0"
