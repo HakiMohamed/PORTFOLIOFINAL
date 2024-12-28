@@ -1,32 +1,19 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaQuoteLeft, FaChevronLeft, FaChevronRight, FaStar } from 'react-icons/fa';
+import { FaQuoteLeft, FaChevronLeft, FaChevronRight, FaStar, FaLinkedin } from 'react-icons/fa';
 
 const testimonials = [
   {
     id: 1,
     name: "Soukaina El Azizi",
-    role: "PC HALLE CEO  ",
+    role: "PC HALLE CEO",
     image: "/public/uploads/soukainaAzizi.jpeg",
-    text: "Mohamed a développé un excellent système de plugins pour notre plateforme e-commerce. Son travail a considérablement amélioré la flexibilité de notre système.",
-    rating: 5
+    text: "Mohamed a effectué un stage de 6 mois au sein de Pchalle, durant lequel il a su démontrer son autonomie ainsi que sa capacité à prendre des initiatives pour résoudre divers problèmes techniques. Je le recommande vivement et lui souhaite beaucoup de succès pour la suite.",
+    rating: 5,
+    linkedinUrl: "https://www.linkedin.com/in/mohamedhaki/details/recommendations/?detailScreenTabIndex=0"
   },
-  {
-    id: 2,
-    name: "YouCode UMPF",
-    role: "Institution",
-    image: "/testimonials/client2.jpg",
-    text: "Un étudiant exemplaire qui a démontré d'excellentes capacités techniques et une grande motivation dans le développement web.",
-    rating: 5
-  },
-  {
-    id: 3,
-    name: "FSJES Cadi ayad",
-    role: "Institution",
-    image: "/testimonials/client3.jpg",
-    text: "Mohamed a excellé dans ses études en droit tout en développant ses compétences en programmation, montrant une capacité remarquable à gérer plusieurs disciplines.",
-    rating: 5
-  }
+  
+  
 ];
 
 const Testimonials = () => {
@@ -48,27 +35,12 @@ const Testimonials = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-white text-center mb-12"
         >
-          Témoignages
+          Testimonials
         </motion.h2>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Navigation Buttons */}
-          <button
-            onClick={handlePrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-gray-400 hover:text-green-500 transition-colors"
-          >
-            <FaChevronLeft className="text-3xl" />
-          </button>
-
-          <button
-            onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-gray-400 hover:text-green-500 transition-colors"
-          >
-            <FaChevronRight className="text-3xl" />
-          </button>
-
           {/* Testimonials Slider */}
-          <div className="overflow-hidden">
+          <div className="overflow-hidden cursor-pointer">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -78,10 +50,10 @@ const Testimonials = () => {
                 transition={{ duration: 0.3 }}
                 className="bg-gray-800 rounded-lg p-8"
               >
-                <div className="flex flex-col items-center text-center">
-                  <FaQuoteLeft className="text-4xl text-green-500 mb-6" />
+                <div onClick={() => window.open(testimonials[currentIndex].linkedinUrl, '_blank')}  className="flex flex-col items-center text-center">
+                  <FaQuoteLeft className="text-4xl cursor-pointer text-green-500 mb-6" />
                   
-                  <p className="text-gray-300 text-lg mb-6 italic">
+                  <p className="text-gray-300 cursor-pointer text-lg mb-6 italic">
                     "{testimonials[currentIndex].text}"
                   </p>
 
@@ -91,7 +63,8 @@ const Testimonials = () => {
                     ))}
                   </div>
 
-                  <div className="flex items-center space-x-4">
+                  <div  className="flex items-center space-x-4 cursor-pointer" 
+                       onClick={() => window.open(testimonials[currentIndex].linkedinUrl, '_blank')}>
                     <img
                       src={testimonials[currentIndex].image}
                       alt={testimonials[currentIndex].name}
@@ -104,6 +77,12 @@ const Testimonials = () => {
                       <p className="text-gray-400">
                         {testimonials[currentIndex].role}
                       </p>
+                      {testimonials[currentIndex].linkedinUrl && (
+                        <span className="text-blue-400 hover:text-blue-500 inline-flex items-center gap-2 mt-2">
+                          <FaLinkedin />
+                          <span>View on LinkedIn</span>
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -111,18 +90,35 @@ const Testimonials = () => {
             </AnimatePresence>
           </div>
 
-          {/* Dots Navigation */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors
-                  ${index === currentIndex 
-                    ? 'bg-green-500' 
-                    : 'bg-gray-600 hover:bg-gray-500'}`}
-              />
-            ))}
+          {/* Navigation Buttons and Dots - Moved to bottom for mobile */}
+          <div className="flex items-center justify-center space-x-4 mt-6">
+            <button
+              onClick={handlePrevious}
+              className="text-gray-400 hover:text-green-500 transition-colors p-2"
+            >
+              <FaChevronLeft className="text-2xl" />
+            </button>
+
+            {/* Dots Navigation */}
+            <div className="flex justify-center space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-colors
+                    ${index === currentIndex 
+                      ? 'bg-green-500' 
+                      : 'bg-gray-600 hover:bg-gray-500'}`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={handleNext}
+              className="text-gray-400 hover:text-green-500 transition-colors p-2"
+            >
+              <FaChevronRight className="text-2xl" />
+            </button>
           </div>
         </div>
       </div>

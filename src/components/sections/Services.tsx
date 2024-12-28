@@ -4,39 +4,39 @@ import { FaCode, FaServer, FaMobile, FaDatabase, FaCloud, FaCogs } from 'react-i
 const services = [
   {
     icon: FaCode,
-    title: "Développement Frontend",
-    description: "Création d'interfaces utilisateurs modernes et réactives avec React.js, Next.js et TypeScript.",
-    technologies: ["React.js", "TypeScript", "Tailwind CSS", "Next.js"]
+    title: "Frontend Development",
+    description: "Creating modern and reactive user interfaces with React.js, Next.js, and TypeScript.",
+    technologies: ["React.js", "TypeScript", "Tailwind CSS", "Next.js","Vue.js"]
   },
   {
     icon: FaServer,
-    title: "Développement Backend",
-    description: "Conception et développement d'APIs RESTful robustes et évolutives.",
-    technologies: ["Node.js", "Express.js", "MongoDB", "API REST"]
+    title: "Backend Development",
+    description: "Designing and developing robust and scalable RESTful APIs.",
+    technologies: ["Node.js", "Nest.js", "Express.js", "MongoDB",]
   },
   {
     icon: FaMobile,
-    title: "Applications Responsives",
-    description: "Développement d'applications web adaptatives pour tous les appareils.",
+    title: "Responsive Applications",
+    description: "Developing adaptive web applications for all devices.",
     technologies: ["Mobile-First", "Progressive Web Apps", "Responsive Design"]
   },
   {
     icon: FaDatabase,
-    title: "Gestion de Base de Données",
-    description: "Conception et optimisation de bases de données NoSQL et SQL.",
+    title: "Database Management",
+    description: "Designing and optimizing NoSQL and SQL databases.",
     technologies: ["MongoDB", "MySQL", "PostgreSQL"]
   },
   {
     icon: FaCloud,
-    title: "Déploiement Cloud",
-    description: "Déploiement et maintenance d'applications sur le cloud.",
-    technologies: ["AWS", "Docker", "CI/CD"]
+    title: "Cloud Deployment",
+    description: "Deploying and maintaining applications on the cloud.",
+    technologies: ["AWS", "Docker", "CI/CD" ]
   },
   {
     icon: FaCogs,
-    title: "Intégration & API",
-    description: "Intégration de services tiers et développement d'APIs personnalisées.",
-    technologies: ["REST APIs", "GraphQL", "WebSocket"]
+    title: "Integration & API",
+    description: "Integrating third-party services and developing custom APIs.",
+    technologies: ["REST APIs", "GraphQL", "WebSocket", "Socket.io","RabbitMQ"]
   }
 ];
 
@@ -49,7 +49,7 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-white text-center mb-12"
         >
-          Services & Expertise
+          My Services & Expertise
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

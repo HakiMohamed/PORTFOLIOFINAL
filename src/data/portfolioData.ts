@@ -2,16 +2,15 @@ export const personalInfo = {
   name: "MOHAMED HAKI",
   title: "Mern Stack Developer",
   image: "/uploads/Mypicture.png",
-  bio: "Développeur Full-Stack spécialisé dans la stack MERN (MongoDB, Nestjs, Express.js, React.js, Node.js), avec une solide expérience dans le développement d'applications web performantes, évolutives et sécurisées. Expert en conception d'API RESTful, intégration de JWT pour l'authentification, et développement d'interfaces utilisateurs réactives. Passionné par les pratiques de développement agile.",
+  bio: "Full-Stack Developer specialized in MERN stack (MongoDB, Nestjs, Express.js, React.js, Node.js), with solid experience in developing high-performance, scalable, and secure web applications. Expert in RESTful API design, JWT authentication integration, and responsive user interface development. Passionate about agile development practices.",
   email: "mohamedhaki70@gmail.com",
-  phone: "+212-644725030",
-  location: "Maroc",
+  phone: "+212-641725930",
+  location: "Morocco",
   social: {
     github: "HakiMohamed",
     linkedin: "mohamed-haki-64534a204",
     twitter: "mohamedhaki70"
   },
-  // Code snippet to explain my skills and passions
   codeSnippet: `// intro 
   const developer = {
     name: "Mohamed Haki",
@@ -46,15 +45,14 @@ export const personalInfo = {
   ]
 };
 
-
 export const experiences = [
   {
     id: "1",
-    title: "Développeur Full-Stack PHP Symfony",
+    title: "Full-Stack PHP Symfony Developer",
     logo: "/uploads/logosPchalle.png",
-    company: "PC HALLE Tanger",
-    period: "13 Mai 2022 - 13 Juillet 2024",
-    description: "Mise en place d'un système de plugins pour la plateforme de création de boutiques en ligne permettant aux utilisateurs de personnaliser et d'intégrer des fonctionnalités tierces.",
+    company: "PC HALLE Tangier",
+    period: "May 13, 2022 - July 13, 2024",
+    description: "Implementation of a plugin system for the online store creation platform allowing users to customize and integrate third-party functionalities.",
     technologies: ["PHP", "Symfony 6.4", "twig", "javascript", "mysql", "TailwindCss"],
     codeSnippet: `// Developer working with Symfony Plugin System
     class Developer {
@@ -63,7 +61,7 @@ export const experiences = [
       }
     
       work() { 
-        console.log(\`\${this.name} says: "I’m making plugins with Symfony, so users can add their own stuff... Like that time I added a '404 Not Found' page to the homepage!"\`);
+        console.log(\`\${this.name} says: "I'm making plugins with Symfony, so users can add their own stuff... Like that time I added a '404 Not Found' page to the homepage!"\`);
       }
     }
     
@@ -78,11 +76,11 @@ export const experiences = [
   },
   {
     id: "2",
-    title: "Etudiant Développeur Full-Stack",
+    title: "Full-Stack Developer Student",
     company: "YouCode UM6P",
     logo: "/uploads/logosYoucode.png",
     period: "2023 - 2025",
-    description: "Etudiant en développement full-stack à YouCode UM6P, une école innovante où l'apprentissage est basé sur une pédagogie par projets, favorisant la collaboration en équipe et le développement des compétences techniques et humaines.",
+    description: "Full-stack development student at YouCode UM6P, an innovative school where learning is based on project-based pedagogy, promoting team collaboration and development of technical and soft skills.",
     technologies: [
       "React",
       "Nestjs",
@@ -108,35 +106,65 @@ export const experiences = [
       "MySQL",
       "TailwindCss"
     ],
-    codeSnippet: `// Collaborative Project Management Simulation
-  const projectWorkflow = (team) => {
-    const tasks = ["Frontend Development", "Backend Development", "Database Design", "Testing", "Deployment"];
+    codeSnippet: `
+    // Experience at YouCode: Learning by Doing and Collaboration
+    const youcodeExperience = () => {
+      console.log("🎓 Welcome to YouCode: Where Learning Meets Real-World Practice!");
     
-    console.log("🚀 YouCode Project Workflow");
+      // Core YouCode Values
+      const values = [
+        "🚀 Learn by Doing",
+        "🤝 Team Collaboration",
+        "💡 Problem-Solving",
+        "🌟 Real-World Projects"
+      ];
     
-    team.forEach((member, index) => {
-      console.log(\`👤 Member: \${member.name} | Role: \${member.role}\`);
-      console.log(\`Assigned Task: \${tasks[index % tasks.length]}\`);
-    });
+      console.log("💻 Core Values at YouCode:");
+      values.forEach((value) => console.log(value));
     
-    console.log("🔄 Collaboration and Iterative Feedback:");
-    tasks.forEach((task) => {
-      console.log(\`✔️ Task Completed: \${task} | Reviewed and Improved by Team.\`);
-    });
-  
-    console.log("✅ Final Project Delivered Successfully!");
-  };
-  
-  // Example Team
-  const team = [
-    { name: "Mohamed Haki", role: "Full-Stack Developer" },
-    { name: "El morjani Mohamed", role: "UI/UX Designer" },
-    { name: "Mohamed tergui", role: "Backend Developer" },
-    { name: "Oussama ben maazi", role: "Frontend Developer" },
-    { name: "Yassine Fakihi", role: "DevOps Engineer" }
-  ];
-  
-  projectWorkflow(team);`,
+      // Example of a Collaborative Project Workflow
+      const projectWorkflow = (team) => {
+        const tasks = [
+          "Frontend Development",
+          "Backend Development",
+          "Database Design",
+          "Testing",
+          "Deployment"
+        ];
+    
+        console.log("\\n🚧 YouCode Collaborative Project Workflow");
+    
+        team.forEach((member, index) => {
+          console.log(\`👤 Member: \${member.name} | Role: \${member.role}\`);
+          console.log(\`🔧 Assigned Task: \${tasks[index % tasks.length]}\`);
+        });
+    
+        console.log("\\n🔄 Team Collaboration and Iterative Feedback:");
+        tasks.forEach((task) => {
+          console.log(\`✔️ Task Completed: \${task} | Reviewed and Improved by Team.\`);
+        });
+    
+        console.log("\\n✅ Final Project Delivered Successfully!");
+      };
+    
+      // Example Team
+      const team = [
+        { name: "Mohamed Haki", role: "Full-Stack Developer" },
+        { name: "El Morjani Mohamed", role: "UI/UX Designer" },
+        { name: "Mohamed Tergui", role: "Backend Developer" },
+        { name: "Oussama Ben Maazi", role: "Frontend Developer" },
+        { name: "Yassine Fakihi", role: "DevOps Engineer" }
+      ];
+    
+      projectWorkflow(team);
+    
+      console.log("\\n🎉 At YouCode, we learn, collaborate, and succeed together!");
+    };
+    
+    // Run the YouCode experience simulation
+    youcodeExperience();
+    `
+    ,
     metrics: {
       teamSize: 6,
       codeReviews: 120,
@@ -144,7 +172,6 @@ export const experiences = [
       uptime: "99.8%"
     }
   }
-  
 ];
 
 export const skills = [
@@ -153,16 +180,46 @@ export const skills = [
     level: 90,
     category: "Development",
     icon: "🎨",
-    description: "Développement d'interfaces utilisateur modernes et réactives",
-    experience: "2 ans",
+    description: "Development of modern and reactive user interfaces",
+    experience: "2 years",
     projects: 15,
     technologies: [
-      { name: "React.js", level: 90, projects: 10 },
-      { name: "Vuejs", level: 85, projects: 5 },
-      { name: "TailwindCSS", level: 90, projects: 12 },
-      { name: "Bootstrap", level: 85, projects: 8 },
-      { name: "Jquery", level: 80, projects: 2 },
-      { name: "Nextjs", level: 80, projects: 2 },
+      { 
+        name: "React.js", 
+        level: 90, 
+        projects: 10,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+      },
+      { 
+        name: "Vuejs", 
+        level: 85, 
+        projects: 5,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"
+      },
+      { 
+        name: "TailwindCSS", 
+        level: 90, 
+        projects: 12,
+        logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+      },
+      { 
+        name: "Bootstrap", 
+        level: 85, 
+        projects: 8,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg"
+      },
+      { 
+        name: "Jquery", 
+        level: 80, 
+        projects: 2,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original.svg"
+      },
+      { 
+        name: "Nextjs", 
+        level: 80, 
+        projects: 2,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
+      },
     ]
   },
   {
@@ -170,16 +227,40 @@ export const skills = [
     level: 85,
     category: "Development",
     icon: "⚙️",
-    description: "Développement de serveurs et APIs robustes",
-    experience: "2 ans",
+    description: "Development of robust servers and APIs",
+    experience: "2 years",
     projects: 12,
     technologies: [
-      { name: "Node.js", level: 85},
-      { name: "Express.js", level: 90, projects: 5 },
-      { name: "MongoDB", level: 85 },
-      { name: "Nestjs", level: 80, projects: 5 },
-      { name: "Laravel", level: 80, projects: 10 },
-      { name: "Symfony", level: 80, projects: 3 },
+      { 
+        name: "Node.js", 
+        level: 85, 
+        projects: 8,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+      },
+      { 
+        name: "Express.js", 
+        level: 90, 
+        projects: 5,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg"
+      },
+      { 
+        name: "Nestjs", 
+        level: 80, 
+        projects: 5,
+        logo: "https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg"
+      },
+      { 
+        name: "Laravel", 
+        level: 80, 
+        projects: 10,
+        logo: "https://cdn.worldvectorlogo.com/logos/laravel-2.svg"
+      },
+      { 
+        name: "Symfony", 
+        level: 80, 
+        projects: 3,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/symfony/symfony-original.svg"
+      },
     ]
   },
   {
@@ -187,20 +268,70 @@ export const skills = [
     level: 75,
     category: "Operations",
     icon: "🚀",
-    description: "Déploiement et gestion d'applications",
-    experience: "2 ans",
+    description: "Application deployment and management",
+    experience: "2 years",
     projects: 10,
     technologies: [
-      { name: "Docker", level: 80, projects: 6 },
-      { name: "AWS", level: 75, projects: 4 },
-      { name: "EC2", level: 75, projects: 4 },
-      { name: "S3", level: 70, projects: 3 },
-      { name: "Cognito", level: 70, projects: 3 },
-      { name: "API Gateway", level: 70, projects: 3 },
-      { name: "Lambda", level: 70, projects: 3 },
-      { name: "SNS", level: 70, projects: 3 },
-      { name: "SQS", level: 70, projects: 3 },
-      { name: "RDS", level: 70, projects: 3 },
+      { 
+        name: "Docker", 
+        level: 80, 
+        projects: 6,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg"
+      },
+      { 
+        name: "AWS", 
+        level: 75, 
+        projects: 4,
+        logo: "https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png"
+      },
+      { 
+        name: "EC2", 
+        level: 75, 
+        projects: 4,
+        logo: "https://static-00.iconduck.com/assets.00/aws-ec2-icon-423x512-iaajemnx.png"
+      },
+      { 
+        name: "S3", 
+        level: 70, 
+        projects: 3,
+        logo: "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+      },
+      { 
+        name: "Cognito", 
+        level: 70, 
+        projects: 3,
+        logo: "https://cdn.worldvectorlogo.com/logos/aws-cognito.svg"
+      },
+      { 
+        name: "API Gateway", 
+        level: 70, 
+        projects: 3,
+        logo: "https://cdn.worldvectorlogo.com/logos/aws-api-gateway.svg"
+      },
+      { 
+        name: "Lambda", 
+        level: 70, 
+        projects: 3,
+        logo: "https://cdn.worldvectorlogo.com/logos/aws-lambda.svg"
+      },
+      { 
+        name: "SNS", 
+        level: 70, 
+        projects: 3,
+        logo: "https://cdn.worldvectorlogo.com/logos/aws-sns.svg"
+      },
+      { 
+        name: "SQS", 
+        level: 70, 
+        projects: 3,
+        logo: "https://cdn.worldvectorlogo.com/logos/aws-sqs.svg"
+      },
+      { 
+        name: "RDS", 
+        level: 70, 
+        projects: 3,
+        logo: "https://cdn.worldvectorlogo.com/logos/aws-rds.svg"
+      }
     ]
   },
   {
@@ -208,14 +339,34 @@ export const skills = [
     level: 70,
     category: "Database",
     icon: "🗄️",
-    description: "Gestion des bases de données",
-    experience: "2 ans",
+    description: "Database management",
+    experience: "2 years",
     projects: 8,
     technologies: [
-      { name: "MySQL", level: 80, projects: 15 },
-      { name: "MongoDB", level: 75, projects: 16 },
-      { name: "PostgreSQL", level: 70, projects: 10 },
-      { name: "SQLite", level: 65, projects: 5 },
+      { 
+        name: "MySQL", 
+        level: 80, 
+        projects: 15,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+      },
+      { 
+        name: "MongoDB", 
+        level: 85,
+        projects: 7,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"
+      },
+      { 
+        name: "PostgreSQL", 
+        level: 70, 
+        projects: 10,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
+      },
+      { 
+        name: "SQLite", 
+        level: 65, 
+        projects: 5,
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg"
+      }
     ]
   }
 ];
@@ -224,165 +375,203 @@ export const education = [
   {
     id: "1",
     logo: "/uploads/logosYoucode.png",
-    logo2: "/uploads/Logo_simplon.co.svg",
+    logo2: "/uploads/simplone1.png",
+    logo3: "/uploads/UM6P.png",
     institution: "YouCode UM6P",
-    degree: "Formation Développeur Full-Stack",
+    degree: "Full-Stack Developer Training",
     period: "2023 - 2025",
-    description: "Formation intensive en développement web full-stack avec YouCode UM6P et Simplon.co, basée sur une pédagogie active et des projets réels simulés. Ce programme, conçu pour refléter les exigences du monde professionnel, met l'accent sur la collaboration en équipe, la gestion de projets, et l'utilisation d'outils et méthodologies agiles, comme dans une entreprise tech moderne. Idéal pour développer des compétences techniques et professionnelles prêtes à l'emploi."
+    description: "Intensive full-stack web development training with YouCode UM6P and Simplon.co, based on active pedagogy and simulated real projects. This program, designed to reflect professional requirements, emphasizes team collaboration, project management, and the use of agile tools and methodologies, as in a modern tech company. Ideal for developing job-ready technical and professional skills."
   },
   {
     id: "2",
-    logo: "/uploads/logosCadiayad.png",
+    logo: "/uploads/logofsjes.png",
     institution: "FSJES Cadi ayad",
-    degree: "Etudes en Droit",
+    degree: "Law Studies",
     period: "2020/2022",
-    description: "Étudiant en troisième année au Département de droit en français à Marrakech"
+    description: "Third-year student in the French Law Department in Marrakech"
   },
   {
     id: "3",
-    institution: "Lycée AL MASSIRA",
-    degree: "Baccalauréat",
+    logo: "/uploads/ministre.png",
+    institution: "AL MASSIRA High School",
+    degree: "High School Diploma",
     period: "2020",
     location: "TATA",
-    description: "Baccalauréat en sciences humaines "
+    description: "High School Diploma in Human Sciences"
   }
 ];
 
 export const languages = [
- 
   {
-    language: "Français",
-    level: "Intermédiaire",
+    language: "French",
+    level: "Intermediate",
     proficiency: 70
   },
   {
-    language: "Anglais",
-    level: "Intermédiaire",
+    language: "English",
+    level: "Intermediate",
     proficiency: 50
   },
   {
-    language: "Arabe",
-    level: "Langue maternelle",
+    language: "Arabic",
+    level: "Native",
     proficiency: 100
   }
 ];
 
 export const interests = [
-  "Développement d'API",
-  "Développement d'Applications Web",
-  "Développement d'Applications Mobile",
-  "Développement d'Applications de Gestion",
+  "API Development",
+  "Web Application Development",
+  "Mobile Application Development",
+  "Management Application Development",
 ];
 
 export const softSkills = [
-  "Sens de l'Initiative",
-  "Adaptabilité",
-  "Travail en Équipe",
+  "Initiative",
+  "Adaptability",
+  "Teamwork",
   "Motivation",
-  "Résolution de problèmes",
-  "Organisation",
+  "Problem Solving",
+  "Organization",
 ];
 
 export const projects = [
   {
     id: "1",
-    title: "Plateforme de Chat",
-    description: "Application de messagerie en temps réel avec microservices",
-    image: "/projects/chat-app.png",
+    title: "Chat Platform",
+    description: "Real-time messaging application with microservices",
+    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1614427771727-77613715f08c?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1607427225127-a0c164e79d91?w=800&auto=format&fit=crop"
+    ],
     technologies: ["React", "Node.js", "WebSocket", "MongoDB","nestjs","JWT","Docker","AWS","EC2","S3"],
     githubUrl: "https://github.com/HakiMohamed",
     liveUrl: "#",
     features: [
-      "Messagerie en temps réel",
-      "Authentification sécurisée",
-      "Gestion des groupes"
+      "Real-time messaging",
+      "Secure authentication",
+      "Group management"
     ]
   },
   {
     id: "2",
     title: "alloMedia",
-    description: "Application de livraison à domicile",
-    image: "/projects/delivery-app.png",
+    description: "Home delivery application",
+    image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&auto=format&fit=crop"
+    ],
     technologies: ["React", "Node.js", "MongoDB", "JWT","Tailwindss", "docker","EC2","S3","SNS"],
     githubUrl: "https://github.com/HakiMohamed",
     liveUrl: "#",
     features: [
-      "Système de commande",
-      "Suivi en temps réel",
-      "Paiement sécurisé",
-      "Gestion des commandes",
-      "Gestion des livreurs",
-      "Gestion des clients",
-      "Gestion des livres",
-      "Gestion des commandes",
+      "Order system",
+      "Real-time tracking",
+      "Secure payment",
+      "Order management",
+      "Driver management",
+      "Customer management",
+      "Book management",
+      "Order management",
     ]
   },
   {
     id: "3",
-    title: "Plateforme de Réservation",
-    description: "Système de gestion des salles de réunion",
-    image: "/projects/booking-app.png",
+    title: "Booking Platform",
+    description: "Meeting room management system",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop"
+    ],
     technologies: ["Node.js", "Express.js", "MongoDB", "React"],
-    githubUrl: "https://github.com/HakiMohamed",
-    liveUrl: "#",
+    githubUrl: "https://github.com/HakiMohamed/meetroom",
+    liveUrl: "https://github.com/HakiMohamed/meetroom",
     features: [
-      "Réservation en ligne",
-      "Gestion des disponibilités",
-      "Notifications automatiques",
-      "Gestion des réservations",
-      "Gestion des clients",
-      "Gestion des salles",
-      "Gestion des événements",
-      "Gestion des utilisateurs",
-      "Gestion des rôles",
+      "Online booking",
+      "Availability management",
+      "Automatic notifications",
+      "Reservation management",
+      "Customer management",
+      "Room management",
+      "Event management",
+      "User management",
+      "Role management",
     ]
   },
-  
   {
     id: "4",
-    title: "Plateforme de Gestion de la Bibliothèque",
-    description: "Système de gestion de la bibliothèque",
-    image: "/projects/library-app.png",
+    title: "Library Management Platform",
+    description: "Library management system",
+    image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&auto=format&fit=crop"
+    ],
     technologies: ["Node.js", "Nestjs", "MongoDB", "React","JWT","Docker","AWS","EC2","S3","cognito","api gateway","lambda","sns","sqs","s3"],
     githubUrl: "https://github.com/HakiMohamed",
     liveUrl: "#",
     features: [
-      "Gestion des utilisateurs",
-      "Gestion des livres",
-      "Gestion des emprunts",
-      "Gestion des retours",
-      "Gestion des réservations",
-      "Gestion des rôles",
+      "User management",
+      "Book management",
+      "Loan management",
+      "Return management",
+      "Reservation management",
+      "Role management",
     ]
   },
-  // add platforme de resaux sociale avec laravel
   {
     id: "5",
-    title: "Plateforme de Réseaux Sociaux",
-    description: "Système de gestion de la bibliothèque",
-    image: "/projects/library-app.png",
+    title: "Social Network Platform",
+    description: "Social network management system",
+    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=800&auto=format&fit=crop"
+    ],
     technologies: ["Laravel", "blade", "mysql","javascript","jquery","tailwindcss","ajax","socialite"],
-    githubUrl: "https://github.com/HakiMohamed",
-    liveUrl: "#",
+    githubUrl: "https://github.com/elkhailihamza/YouConnect/tree/F-HAKI/youconnect/storage",
+    liveUrl: "https://github.com/elkhailihamza/YouConnect/tree/F-HAKI/youconnect/storage",
     features: [
-      "Gestion des utilisateurs",
-      "Gestion des posts",
-      "Gestion des commentaires",
-      "Gestion des likes",
-      "Gestion des amis",
-      "Gestion des groupes",
-      "Gestion des notifications",
-      "Gestion des messages",
+      "User management",
+      "Post management",
+      "Comment management",
+      "Like management",
+      "Friend management",
+      "Group management",
+      "Notification management",
+      "Message management",
     ]
   },
-  // add platforme de real estate avec laravel
   {
     id: "6",
-    title: "Plateforme de Real Estate",
-    description: "Plateforme de vent et achat et location de propriétés immobiliers ",
-    image: "/projects/library-app.png",
+    title: "Real Estate Platform",
+    description: "Platform for selling, buying and renting real estate properties",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=800&auto=format&fit=crop"
+    ],
     technologies: ["Laravel", "blade", "mysql","javascript","jquery","tailwindcss","ajax","socialite"],
-    githubUrl: "https://github.com/HakiMohamed",
-    liveUrl: "#",
+    githubUrl: "https://github.com/HakiMohamed/AGENCY",
+    liveUrl: "https://github.com/HakiMohamed/AGENCY",
+    features: [
+      "Property listing management",
+      "Advanced property search",
+      "User authentication",
+      "Property booking system",
+      "Real estate agent profiles",
+      "Property image gallery",
+      "Contact form integration",
+      "Favorite properties list"
+    ]
   }
 ];

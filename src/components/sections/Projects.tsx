@@ -8,6 +8,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
+  images : string[];
   technologies: string[];
   githubUrl: string;
   liveUrl: string;
@@ -21,10 +22,23 @@ interface ProjectsProps {
 
 const Projects = ({ projects }: ProjectsProps) => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const projectVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? projects.find(p => p.id === selectedProject)?.images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === projects.find(p => p.id === selectedProject)?.images.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   return (
@@ -35,7 +49,7 @@ const Projects = ({ projects }: ProjectsProps) => {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-white text-center mb-12"
         >
-          Projets Réalisés
+          Projects
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -46,14 +60,14 @@ const Projects = ({ projects }: ProjectsProps) => {
               initial="hidden"
               animate="visible"
               transition={{ delay: index * 0.2 }}
-              className="relative group"
+              className="relative group h-full"
             >
               <div
-                className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer"
+                className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer h-full flex flex-col"
                 onClick={() => setSelectedProject(project.id)}
               >
                 {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 w-full">
                   <motion.img
                     src={project.image}
                     alt={project.title}
@@ -66,17 +80,17 @@ const Projects = ({ projects }: ProjectsProps) => {
                       whileHover={{ scale: 1.1 }}
                       className="px-6 py-2 bg-green-500 text-white rounded-lg"
                     >
-                      Voir détails
+                      View Details
                     </motion.button>
                   </div>
                 </div>
 
                 {/* Project Info */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-white mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 mb-4">
+                  <p className="text-gray-400 mb-4 flex-grow">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -115,6 +129,25 @@ const Projects = ({ projects }: ProjectsProps) => {
           ))}
         </div>
 
+        {/* Add View All Projects button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="flex justify-center mt-12"
+        >
+          <motion.a
+            href="https://github.com/HakiMohamed?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center space-x-2 px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+          >
+            <FaGithub className="text-xl" />
+            <span>View All Projects</span>
+          </motion.a>
+        </motion.div>
+
         {/* Project Modal */}
         <AnimatePresence>
           {selectedProject && (
@@ -146,11 +179,48 @@ const Projects = ({ projects }: ProjectsProps) => {
                       </button>
                     </div>
 
-                    <img
-                      src={projects.find(p => p.id === selectedProject)?.image}
-                      alt={projects.find(p => p.id === selectedProject)?.title}
-                      className="w-full h-64 object-cover rounded-lg mb-6"
-                    />
+                    {/* Image Slider */}
+                    <div className="relative aspect-video mb-6">
+                      <AnimatePresence mode='wait'>
+                        <motion.img
+                          key={currentImageIndex}
+                          src={projects.find(p => p.id === selectedProject)?.images[currentImageIndex]}
+                          alt={`${projects.find(p => p.id === selectedProject)?.title} - Image ${currentImageIndex + 1}`}
+                          className="w-full h-64 object-cover rounded-lg"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      </AnimatePresence>
+
+                      {/* Navigation buttons */}
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+                      >
+                        ←
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+                      >
+                        →
+                      </button>
+
+                      {/* Dots indicator */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                        {projects.find(p => p.id === selectedProject)?.images.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentImageIndex(index)}
+                            className={`w-2 h-2 rounded-full ${
+                              currentImageIndex === index ? 'bg-white' : 'bg-gray-500'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
 
                     <div className="space-y-6">
                       <div>
@@ -164,7 +234,7 @@ const Projects = ({ projects }: ProjectsProps) => {
 
                       <div>
                         <h4 className="text-lg font-bold text-white mb-2">
-                          Fonctionnalités
+                          Features
                         </h4>
                         <ul className="list-disc list-inside text-gray-300 space-y-2">
                           {projects.find(p => p.id === selectedProject)?.features.map((feature, index) => (
@@ -197,7 +267,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                           className="px-6 py-2 bg-gray-700 text-white rounded-lg flex items-center space-x-2 hover:bg-gray-600"
                         >
                           <FaGithub />
-                          <span>Voir le code</span>
+                          <span>View Code</span>
                         </a>
                         <a
                           href={projects.find(p => p.id === selectedProject)?.liveUrl}
@@ -206,7 +276,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                           className="px-6 py-2 bg-green-500 text-white rounded-lg flex items-center space-x-2 hover:bg-green-600"
                         >
                           <FaExternalLinkAlt />
-                          <span>Voir le site</span>
+                          <span>View Site</span>
                         </a>
                       </div>
                     </div>

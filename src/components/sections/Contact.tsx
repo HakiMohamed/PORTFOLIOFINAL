@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 interface ContactProps {
   personalInfo: {
@@ -29,11 +30,29 @@ const Contact = ({ personalInfo }: ContactProps) => {
     setIsSubmitting(true);
 
     try {
-      // Simuler l'envoi du formulaire
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'service_y7njab8', 
+        'template_3udeq8r', 
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          to_email: 'Mohamedhaki70@gmail.com',
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Mohamed Haki',
+        },
+        '00Iv-g9W4ABxStvMu' 
+      );
+
+      if (result.status === 200) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
     } catch (error) {
+      console.error('Email error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -64,7 +83,7 @@ const Contact = ({ personalInfo }: ContactProps) => {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-white text-center mb-12"
         >
-          Contactez-moi
+          Contact Me
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -75,8 +94,19 @@ const Contact = ({ personalInfo }: ContactProps) => {
             transition={{ delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold text-white mb-6">
-              Informations de contact
+              Contact Information
             </h3>
+            
+            <div className="mb-6">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-8.0811,-31.7295,-7.8811,31.5295&layer=mapnik&marker=31.6295,-7.9811"
+                width="100%"
+                height="300"
+                style={{ border: 'none', borderRadius: '0.5rem' }}
+                title="Marrakech Map"
+              ></iframe>
+            </div>
+
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -115,7 +145,7 @@ const Contact = ({ personalInfo }: ContactProps) => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-gray-300 mb-2">
-                  Nom
+                  name
                 </label>
                 <input
                   type="text"
@@ -145,7 +175,7 @@ const Contact = ({ personalInfo }: ContactProps) => {
 
               <div>
                 <label htmlFor="subject" className="block text-gray-300 mb-2">
-                  Sujet
+                  subject
                 </label>
                 <input
                   type="text"

@@ -148,7 +148,7 @@ const Hero = ({ personalInfo }: HeroProps) => {
               <CodeSnippet
                 code={personalInfo.codeSnippet}
                 language="javascript"
-                title="developer.ts"
+                title="MohamedHaki.js"
                 runnable={true}
               /> 
             </motion.div>

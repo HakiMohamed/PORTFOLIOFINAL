@@ -91,7 +91,7 @@ const CodeSnippet = ({
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        className="rounded-lg overflow-hidden bg-[#1E1E1E]"
+        className="rounded-lg mt-10  overflow-hidden bg-[#1E1E1E]"
       >
         {/* Header */}
         <div className="flex justify-between items-center px-4 py-2 bg-[#2D2D2D]">

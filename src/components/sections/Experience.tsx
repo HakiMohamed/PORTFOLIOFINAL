@@ -36,23 +36,24 @@ function Experience({ experiences }: ExperienceProps) {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-white text-center mb-12"
         >
-          Expérience 
+          Experience
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Timeline */}
-          <div className="lg:col-span-4">
-            <div className="space-y-4">
+          <div className="lg:col-span-4 overflow-x-auto lg:overflow-visible">
+            <div className="flex lg:block space-x-4 lg:space-x-0 lg:space-y-4 min-w-max lg:min-w-0 pb-4 lg:pb-0">
               {experiences.map((exp) => (
                 <motion.button
                   key={exp.id}
                   onClick={() => setSelectedExp(exp.id)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`w-full p-6 rounded-lg text-left transition-all
+                  className={`p-6 rounded-lg text-left transition-all
                     ${selectedExp === exp.id 
                       ? 'bg-green-500 text-white' 
-                      : 'bg-gray-800 text-gray-400 hover:bg-gray-700'}`}
+                      : 'bg-gray-800 text-gray-400 hover:bg-gray-700'}
+                    w-72 lg:w-full flex-shrink-0`}
                 >
                   <img src={exp.logo} alt={exp.company} className="w-20 h-10" />
                   <h3 className="font-bold text-lg">{exp.title}</h3>
@@ -72,7 +73,7 @@ function Experience({ experiences }: ExperienceProps) {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  className="bg-gray-800 rounded-lg p-6"
+                  className="bg-gray-800 rounded-lg p-4"
                 >
                   {/* Tabs */}
                   <div className="flex space-x-4 mb-6">
@@ -84,7 +85,7 @@ function Experience({ experiences }: ExperienceProps) {
                           : 'bg-gray-700 text-gray-400 hover:bg-gray-600'}`}
                     >
                       <FaBriefcase className="inline-block mr-2" />
-                      Détails
+                      Details
                     </button>
                     <button
                       onClick={() => setActiveTab('code')}
@@ -135,6 +136,7 @@ function Experience({ experiences }: ExperienceProps) {
                           code={experiences.find(exp => exp.id === selectedExp)?.codeSnippet || ''}
                           language="typescript"
                           title="example.ts"
+                          runnable={true}
                         />
                       </motion.div>
                     )}

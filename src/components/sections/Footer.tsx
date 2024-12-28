@@ -15,9 +15,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Section */}
           <div>
-            <h3 className="text-white font-bold text-xl mb-4">À Propos</h3>
+            <h3 className="text-white font-bold text-xl mb-4">About</h3>
             <p className="text-gray-400">
-              Développeur Full-Stack passionné par la création d'applications web modernes et performantes.
+              Passionate Full-Stack developer creating modern and high-performance web applications.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} {personalInfo.name}. Tous droits réservés.
+            © {currentYear} {personalInfo.name}. All rights reserved.
           </p>
 
           <motion.button
