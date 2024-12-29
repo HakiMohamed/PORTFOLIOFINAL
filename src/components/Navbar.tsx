@@ -75,7 +75,7 @@ const Navbar = () => {
               >
                 <span className="relative z-10">{item.label}</span>
                 <motion.span
-                  className="absolute inset-0 bg-gradient-to-r from-emerald-400/10 to-cyan-500/10 rounded-lg opacity-0 group-hover:opacity-100"
+                  className="absolute inset-0  opacity-0 group-hover:opacity-100"
                   layoutId="navbar-hover"
                   transition={{ type: "spring", bounce: 0.3 }}
                 />
@@ -109,7 +109,7 @@ const Navbar = () => {
                   <motion.a
                     key={item.label}
                     href={item.href}
-                    className="w-full text-center px-4 py-3 text-gray-300 hover:text-white rounded-lg hover:bg-gray-800"
+                    className="w-full text-center px-4 py-3 text-gray-300 hover:text-white  "
                     whileHover={{ x: 6 }}
                     onClick={() => setIsOpen(false)}
                   >

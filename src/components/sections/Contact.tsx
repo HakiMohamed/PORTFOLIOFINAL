@@ -213,7 +213,7 @@ const Contact = ({ personalInfo }: ContactProps) => {
                     ? 'bg-gray-600' 
                     : 'bg-green-500 hover:bg-green-600'}`}
               >
-                {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                {isSubmitting ? 'send in progresse...' : 'send message'}
               </motion.button>
 
               {submitStatus !== 'idle' && (
@@ -227,8 +227,8 @@ const Contact = ({ personalInfo }: ContactProps) => {
                   }`}
                 >
                   {submitStatus === 'success' 
-                    ? 'Message envoyé avec succès !' 
-                    : 'Une erreur est survenue. Veuillez réessayer.'}
+                    ? 'Your message sent successfully!' 
+                    : 'An error occurred. Please try again.'}
                 </motion.div>
               )}
             </form>
