@@ -63,11 +63,32 @@ const About = () => {
                     transition={{ delay: index * 0.1 }}
                     className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl hover:bg-gray-800/70 transition-all duration-300"
                   >
-                    <div className="flex md:flex-row flex-col ">
-                      {edu.logo && <img src={edu.logo} alt={edu.institution} className={`w-30 h-10 mx-2 ${edu.logo === '/uploads/logofsjes.png' ? 'bg-white w-[90px] h-[40px]'  : ''}`} />}
-                      
-                      {edu.logo2 && <img src={edu.logo2} alt={edu.institution} className="w-40 h-10 mt-2 mb-2 mx-2 " />}
-                      {edu.logo3 && <img src={edu.logo3} alt={edu.institution} className="w-40 h-10 mt-2 mb-2 bg-white   mx-2" />}
+                    <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-4">
+                      {edu.logo && (
+                        <img 
+                          src={edu.logo} 
+                          alt={edu.institution} 
+                          className={`object-contain max-h-12 ${
+                            edu.logo === '/uploads/logofsjes.png' 
+                              ? 'bg-white w-[120px] md:w-[90px]' 
+                              : 'w-[160px] md:w-[140px]'
+                          }`}
+                        />
+                      )}
+                      {edu.logo2 && (
+                        <img 
+                          src={edu.logo2} 
+                          alt={edu.institution} 
+                          className="object-contain w-[160px] md:w-[140px] max-h-12" 
+                        />
+                      )}
+                      {edu.logo3 && (
+                        <img 
+                          src={edu.logo3} 
+                          alt={edu.institution} 
+                          className="object-contain w-[160px] md:w-[140px] max-h-12 bg-white" 
+                        />
+                      )}
                     </div>
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent mb-3">
                       {edu.degree}

@@ -85,7 +85,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button - Moved to the right */}
           <motion.button
-            className="md:hidden relative p-2 rounded-lg hover:bg-gray-800 ml-auto"
+            className="md:hidden relative p-2 rounded-lg text-green-400 border-2 border-green-300  hover:bg-gray-800 ml-auto"
             onClick={() => setIsOpen(!isOpen)}
             whileTap={{ scale: 0.95 }}
           >

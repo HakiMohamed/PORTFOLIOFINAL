@@ -186,13 +186,13 @@ export const skills = [
     technologies: [
       { 
         name: "React.js", 
-        level: 90, 
+        level: 75, 
         projects: 10,
         logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
       },
       { 
         name: "Vuejs", 
-        level: 85, 
+        level: 70, 
         projects: 5,
         logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"
       },
@@ -210,13 +210,13 @@ export const skills = [
       },
       { 
         name: "Jquery", 
-        level: 80, 
+        level: 70, 
         projects: 2,
         logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original.svg"
       },
       { 
         name: "Nextjs", 
-        level: 80, 
+        level: 75, 
         projects: 2,
         logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
       },
@@ -269,24 +269,18 @@ export const skills = [
     category: "Operations",
     icon: "🚀",
     description: "Application deployment and management",
-    experience: "2 years",
-    projects: 10,
+    experience: "1 years",
+    projects: 3,
     technologies: [
       { 
         name: "Docker", 
-        level: 80, 
+        level: 45, 
         projects: 6,
         logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg"
       },
       { 
-        name: "AWS", 
-        level: 75, 
-        projects: 4,
-        logo: "https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png"
-      },
-      { 
         name: "EC2", 
-        level: 75, 
+        level: 70, 
         projects: 4,
         logo: "https://static-00.iconduck.com/assets.00/aws-ec2-icon-423x512-iaajemnx.png"
       },
@@ -316,19 +310,19 @@ export const skills = [
       },
       { 
         name: "SNS", 
-        level: 70, 
+        level: 66, 
         projects: 3,
         logo: "https://cdn.worldvectorlogo.com/logos/aws-sns.svg"
       },
       { 
         name: "SQS", 
-        level: 70, 
+        level: 66, 
         projects: 3,
         logo: "https://cdn.worldvectorlogo.com/logos/aws-sqs.svg"
       },
       { 
         name: "RDS", 
-        level: 70, 
+        level: 56, 
         projects: 3,
         logo: "https://cdn.worldvectorlogo.com/logos/aws-rds.svg"
       }

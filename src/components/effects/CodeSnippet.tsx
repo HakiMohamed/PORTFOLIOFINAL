@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { FaCopy, FaCheck, FaTerminal } from 'react-icons/fa';
+import { FaCopy, FaCheck, FaTerminal, FaPlay } from 'react-icons/fa';
 
 interface CodeSnippetProps {
   code: string;
@@ -109,8 +109,9 @@ const CodeSnippet = ({
             {runnable && (
               <button
                 onClick={handleRun}
-                className="px-3 py-1 text-sm text-white bg-green-600 hover:bg-green-700 rounded transition-colors mr-2"
+                className="flex items-center gap-2 px-3 py-1 text-sm text-white bg-green-600 hover:bg-green-700 rounded transition-colors mr-2"
               >
+                <FaPlay size={12} />
                 Run
               </button>
             )}
