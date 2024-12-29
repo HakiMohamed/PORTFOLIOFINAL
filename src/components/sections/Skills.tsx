@@ -40,7 +40,7 @@ const Skills = ({ skills }: SkillProps) => {
 
   const codeExamples: { [key: string]: string } = {
     Frontend: `
-  // Simulation d'une application frontend
+ 
   const projects = [
     { name: "Portfolio", status: "En cours" },
     { name: "E-commerce", status: "Terminé" },
@@ -53,7 +53,7 @@ const Skills = ({ skills }: SkillProps) => {
   console.log("🚀 Initializing Frontend Dashboard...");
   console.log("Current Coffee Level:", coffeeLevel);
   
-  // Simuler la correction de bugs
+  
   for(let i = bugCount; i > 0; i--) {
     console.log(\`🪲 Squashing bug #\${i}...\`);
     bugCount--;
@@ -68,7 +68,7 @@ const Skills = ({ skills }: SkillProps) => {
   `,
   
     Backend: `
-  // Simulation d'une API Backend
+  
   const issues = [
     "Database connection timeout",
     "Invalid API key",
@@ -84,7 +84,7 @@ const Skills = ({ skills }: SkillProps) => {
 
   console.log("🔧 Backend Debug System Initialized");
 
-  // Simuler le traitement des problèmes
+  
   issues.forEach(issue => {
     const randomSolution = solutions[Math.floor(Math.random() * solutions.length)];
     console.log(\`🔍 Issue detected: \${issue}\`);
@@ -95,7 +95,7 @@ const Skills = ({ skills }: SkillProps) => {
   `,
   
     DevOps: `
-  // Simulation d'une configuration DevOps
+  
   const services = {
     app: {
       status: "running",
@@ -122,7 +122,7 @@ const Skills = ({ skills }: SkillProps) => {
   `,
 
     Database: `
-  // Simulation d'opérations de base de données
+  
   const mockDatabase = {
     projects: [
       { id: 1, name: "Site Web", status: "active" },
@@ -134,7 +134,7 @@ const Skills = ({ skills }: SkillProps) => {
   console.log("🌐 Connecting to MongoDB...");
   console.log("✅ Connection established!");
 
-  // Simuler une requête
+  
   console.log("\\n📚 Fetching all projects...");
   console.table(mockDatabase.projects);
 

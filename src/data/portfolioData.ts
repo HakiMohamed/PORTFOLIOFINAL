@@ -34,7 +34,7 @@ export const personalInfo = {
     },
   };
   
-  // Call the introduce method
+  
   developer.introduce();
   `,
   
@@ -122,7 +122,7 @@ export const experiences = [
       console.log("💻 Core Values at YouCode:");
       values.forEach((value) => console.log(value));
     
-      // Example of a Collaborative Project Workflow
+      // Collaborative Project Workflow
       const projectWorkflow = (team) => {
         const tasks = [
           "Frontend Development",
@@ -147,7 +147,7 @@ export const experiences = [
         console.log("\\n✅ Final Project Delivered Successfully!");
       };
     
-      // Example Team
+     
       const team = [
         { name: "Mohamed Haki", role: "Full-Stack Developer" },
         { name: "El Morjani Mohamed", role: "UI/UX Designer" },
@@ -161,7 +161,7 @@ export const experiences = [
       console.log("\\n🎉 At YouCode, we learn, collaborate, and succeed together!");
     };
     
-    // Run the YouCode experience simulation
+    
     youcodeExperience();
     `
     ,
