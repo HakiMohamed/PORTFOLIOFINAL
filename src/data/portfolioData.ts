@@ -54,7 +54,7 @@ export const experiences = [
     period: "May 13, 2022 - July 13, 2024",
     description: "Implementation of a plugin system for the online store creation platform allowing users to customize and integrate third-party functionalities.",
     technologies: ["PHP", "Symfony 6.4", "twig", "javascript", "mysql", "TailwindCss"],
-    codeSnippet: `// Developer working with Symfony Plugin System
+    codeSnippet: `
     class Developer {
       constructor(name) { 
         this.name = name; 

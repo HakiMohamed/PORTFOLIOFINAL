@@ -138,7 +138,7 @@ const Skills = ({ skills }: SkillProps) => {
   console.log("\\n📚 Fetching all projects...");
   console.table(mockDatabase.projects);
 
-  // Simuler une insertion
+ 
   const newProject = {
     id: 4,
     name: "New Project",
